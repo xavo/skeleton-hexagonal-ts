@@ -1,0 +1,31 @@
+version: "3"
+services:
+
+  mysql:
+    image: mysql:8.0.27
+    # Force platform to be compatible with Mac M1
+    platform: linux/x86_64
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "true"
+      MYSQL_DATABASE: "project"
+    ports:
+      - "3306:3306"
+    networks:
+      - main
+
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    container_name: 'rabbitmq'
+    ports:
+        - 5673:5672
+        - 15673:15672
+    volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+        - rabbitmq_nodejs
+
+networks:
+  rabbitmq_nodejs:
+    driver: bridge
+  main:      
