@@ -11,6 +11,7 @@
         "start": "node dist/main",
         "start:dev": "nest start --watch",
         "start:dev:withDocker": "docker-compose up -d && npm run start:dev",
+        "start:consumer:dev": "nest start --config consumer.json --watch",
         "test": "npm run test:jest && npm run test:cucumber",
         "test:jest": "jest",
         "test:jest:dev": "jest --verbose --watchAll",

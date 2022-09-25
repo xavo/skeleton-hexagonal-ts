@@ -9,6 +9,10 @@ install: install-dependencies
 start-dev:
 	@npm run start:dev:withDocker
 
+.PHONY: start-consumer
+start-consumer:
+	@npm run start:consumer:dev
+
 .PHONY: unit-tests
 unit-tests:
 	@npm run test:jest:dev

@@ -1,7 +1,7 @@
 {
     "collection": "@nestjs/schematics",
     "sourceRoot": "src",
-    "entryFile": "src/Project/Consumer/consumer.js",
+    "entryFile": "src/Consumer/consumer.js",
     "compilerOptions": {
         "watchAssets": true
     }
