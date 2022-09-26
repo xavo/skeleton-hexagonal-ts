@@ -25,7 +25,6 @@
         "migration:create": "npm run typeorm migration:create -- -n",
         "migration:run": "npm run typeorm migration:run",
         "migration:revert": "npm run typeorm migration:revert",
-        "prepare": "husky install"
     },
     "license": "UNLICENSED",
     "private": true,
@@ -49,7 +48,6 @@
         "eslint-config-airbnb-typescript": "^17.0.0",
         "eslint-plugin-hexagonal-architecture": "^1.0.3",
         "eslint-plugin-jest": "^26.1.3",
-        "husky": "^8.0.0",
         "jest": "^27.5.1",
         "jest-mock-extended": "^2.0.5",
         "prettier": "^2.5.1",
