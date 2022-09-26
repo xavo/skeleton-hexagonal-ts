@@ -22,7 +22,7 @@ import {SharedModule} from './Shared.module';
             ): RabbitMqEventbus {
                 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 const config =
-                    configService.get<RabbitMqConfig>('RabbitMqConfig')!;
+                    configService.get<RabbitMqConfig>('rabbitMqConfig')!;
                 return new RabbitMqEventbus(config, logger);
             },
             inject: [ConfigService, 'Logger'],
@@ -30,10 +30,6 @@ import {SharedModule} from './Shared.module';
         {
             provide: 'EventBus',
             useExisting: RabbitMqEventbus,
-        },
-        {
-            provide: 'Logger',
-            useExisting: WinstonLogger,
         },
     ],
     exports: ['EventBus'],
