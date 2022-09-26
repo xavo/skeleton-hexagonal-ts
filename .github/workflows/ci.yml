@@ -21,7 +21,6 @@ jobs:
         with:
           node-version: ${{ steps.nvm.outputs.version }}
           registry-url: https://npm.pkg.github.com
-          scope: '@project'
           cache: 'npm'
 
       - name: Install dependencies
